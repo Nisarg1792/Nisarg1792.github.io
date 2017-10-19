@@ -1,6 +1,6 @@
 // Hello.
 //
-// This is The Scripts used for Awesome Photography/Portfolio Template
+// This is The Scripts used for Destination Places website
 //
 //
 
