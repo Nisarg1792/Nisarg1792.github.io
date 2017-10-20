@@ -48,7 +48,7 @@ Header append Vary: Accept-Encoding
 # Enable expirations
 ExpiresActive On 
 # Default directive
-ExpiresDefault "access plus 1 month"
+ExpiresDefault "access plus 2 days"
 # My favicon
 ExpiresByType image/x-icon "access plus 1 year"
 # Images
