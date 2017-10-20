@@ -38,6 +38,12 @@ Header set Cache-Control "max-age=2592000, public"
   Header append Vary User-Agent
 </IfModule>
 
+<IfModule mod_headers.c>
+<FilesMatch ".(js|css|xml|gz|html)$">
+Header append Vary: Accept-Encoding
+</FilesMatch>
+</IfModule>
+
 <IfModule mod_expires.c>
 # Enable expirations
 ExpiresActive On 
