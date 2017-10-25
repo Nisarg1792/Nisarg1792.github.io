@@ -1,7 +1,7 @@
   #Redirect example.com to www.example.com:
  
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.portisarg\.com$
+RewriteCond %{HTTP_HOST} ^www\.portisarg\.me$
 RewriteRule ^/?$ "http\:\/\/portisarg\.me\/" [R=301,L]
 
 RewriteEngine On
