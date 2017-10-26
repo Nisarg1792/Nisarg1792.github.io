@@ -69,10 +69,10 @@ ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
- <IfModule mod_headers.c>
-<FilesMatch ".(js|css|xml|gz|html)$">
-Header append Vary: Accept-Encoding
-</FilesMatch>
+<IfModule headers_module>
+    <FilesMatch "\.(html|js|css)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
 </IfModule>
 
 </IfModule>
