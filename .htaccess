@@ -1,3 +1,10 @@
+# Various rewrite rules.
+<IfModule mod_rewrite.c> 
+ #Redirect example.com to www.example.com:
+ RewriteEngine on
+ RewriteCond %{HTTP_HOST} ^www\.portisarg\.me$
+ RewriteRule ^/?$ "http\:\/\/portisarg\.me\/" [R=301,L]
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
@@ -61,3 +68,12 @@ ExpiresByType text/css "access plus 1 month"
 # Javascript
 ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
+
+<IfModule headers_module>
+    <FilesMatch "\.(html|js|css)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+</IfModule>
+

@@ -8,7 +8,6 @@
     <meta name="description" content="A Picures of Destionation Places all around Globe - Portisarg">
     <meta name="keywords" content="Destination Places, Globe, Travel Photography, Instagram, Twitter, Facebook, Earth Pictures, Destinations, Beautiful Destinations, Wonderful Places, Travel, Amazing Places, Natural Photography, portfolio, photography, creative, Instatravel, Community, blog, blog photography">
     <meta name="author" content="Destination Places">  
-    <meta name="google-site-verification" content="10cOwWEqIlzg4qYttJVyVAPE-8t1dM7ww0qOmRNNY2I" />
 
     <!-- Mobile Specific Metas
     ================================================== -->
@@ -29,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
 	  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87400041-2"></script>
@@ -455,7 +454,7 @@
     </div>
 
     <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <!--  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -629,7 +628,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Call-To-Action Section
     ================================================== -->
@@ -746,26 +745,18 @@
     <script src="js/wow.min.js"></script><!-- Content Animation -->
     <script type="text/javascript" src="js/SmoothScroll.js"></script> <!-- Smooth scrolling page-->
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    
-    <script type="text/javascript" src="js/classie.js"></script>
+    <script type="text/javascript" src="js/cbpAnimatedHeader.js"></script>
 
     <!-- Parallax Effects-->
     <script src="js/skrollr.js"></script>
     <script src="js/imagesloaded.js"></script>
 
     <!-- Contact page-->
-    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>
     
     <!-- My Custom Plugin JavaScript -->
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript">
-	var cbpAnimatedHeader=(function(){var docElem=document.documentElement,header=document.querySelector('.navbar-default'),didScroll=false,changeHeaderOn=300;function init(){window.addEventListener('scroll',function(event){if(!didScroll){didScroll=true;setTimeout(scrollPage,200);}},false);}
-	function scrollPage(){var sy=scrollY();if(sy>=changeHeaderOn){classie.add(header,'navbar-shrink');}
-	else{classie.remove(header,'navbar-shrink');}
-	didScroll=false;}
-	function scrollY(){return window.pageYOffset||docElem.scrollTop;}
-	init();})();  
-	</script>
+	  
+
   </body>
 </html>
