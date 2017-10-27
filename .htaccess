@@ -8,11 +8,7 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-# 1 Month for most static assets
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-Header set Cache-Control "max-age=2592000, public"
-</filesMatch>
+</IfModule>
 
 <IfModule mod_headers.c>
 <FilesMatch ".(js|css|xml|gz|html)$">
@@ -33,11 +29,4 @@ Header append Vary: Accept-Encoding
   ExpiresByType application/x-javascript "access plus 86400 seconds"
 </IfModule>
 
-<IfModule headers_module>
-    <FilesMatch "\.(html|js|css)$">
-        Header append Vary: Accept-Encoding
-    </FilesMatch>
-</IfModule>
-
-</IfModule>
 
