@@ -4,7 +4,7 @@
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
 		$message = $_POST['message'];
-		$from = 'destinationplaces@gmail.com'; 
+		$from = 'noreply@gmailcom'; 
 		$to = ''; 
 		$subject = 'Message from Destination ';
 		
