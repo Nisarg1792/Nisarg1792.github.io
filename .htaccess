@@ -73,4 +73,8 @@ Header set Cache-Control "max-age=2628000, public"
         ExpiresByType image/svg+xml                       "access plus 1 month"
 </IfModule>
 
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourdomain.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 
