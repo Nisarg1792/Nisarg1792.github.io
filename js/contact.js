@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "portisarg.me/submit.php",
+                url: "submit.php",
                 type: "POST",
                 data: {
                     name: name,
