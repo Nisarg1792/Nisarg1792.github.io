@@ -8,15 +8,12 @@
 
   // The above are the variables that will hold data entered by the user
   // You can use these variables, rename them or create your own
-  //Make sure the text in the square brackets correspond to the name attributes in your form
-
 
   $message = "From: $name \nEmail: $email \nPhone: $phone \nMessage: $message \n";
 
   // The $message variable will form the message of the email.
   // It collects the variables your declared at the top
   // A line break ( \n ) is placed between each section
-
 
   $sent = mail($to, $subject, $message) ; 
     if($sent) {
