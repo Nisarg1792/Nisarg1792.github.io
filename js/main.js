@@ -1,4 +1,4 @@
-// This is The Scripts used for Destination Places website
+/* This is The Scripts used for Destination Places website */
 
 function main() {
 
