@@ -1,8 +1,4 @@
-// Hello.
-//
-// This is The Scripts used for Destination Places website
-//
-//
+/* This is The Scripts used for Destination Places website */
 
 function main() {
 
@@ -58,12 +54,9 @@ function main() {
         $(this).find('iframe').attr('src', '');
         $(this).find('iframe').attr('src', src);
   });
-
-
-    
-
+   
 }());
-
+   
 }
 main();
 
