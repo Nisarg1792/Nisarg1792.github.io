@@ -21,8 +21,6 @@ Header append Vary: Accept-Encoding
 Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 
-
-
 <IfModule mod_expires.c>
         ExpiresActive on
         ExpiresDefault                                    "access plus 1 month"
@@ -71,7 +69,6 @@ RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourdomain.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
-
 
 <FilesMatch ".(pl|php|cgi|spl|scgi|fcgi)$">
 Header unset Cache-Control
