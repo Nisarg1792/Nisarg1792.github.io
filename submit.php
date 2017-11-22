@@ -1,5 +1,5 @@
 <?php 
-  $to = 'destinationplaces@gmail.com' ;  // Replace email address with your own
+  $to = 'support@portisarg.me' ;  // Replace email address with your own
   $subject = 'Contact Form' ; 
   $name = $_POST['name'] ; 
   $email = $_POST['email'] ;
