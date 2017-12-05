@@ -65,11 +65,3 @@ Header set Cache-Control "max-age=2628000, public"
   </FilesMatch>
 </IfModule>
 
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourdomain.com [NC]
-RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
-
-<FilesMatch ".(pl|php|cgi|spl|scgi|fcgi)$">
-Header unset Cache-Control
-</FilesMatch>
