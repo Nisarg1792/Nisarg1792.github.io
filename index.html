@@ -32,8 +32,6 @@
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87400041-2"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-      
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -664,7 +662,7 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <div class="g-recaptcha" data-sitekey="6LeEnUEUAAAAAINjqPSoQedDOjnKggxJXTeSRGuU"></div>
+                 <div class="g-recaptcha" id="recaptcha1" data-sitekey="6Le6PUEUAAAAAJLMNPj2F7Bmtosq2K3B1rw90yAe"></div>
                   <button type="submit" class="btn btn-send">Send Message</button> <!-- Send button -->
                 </div>
               </div>
@@ -733,6 +731,20 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+ 
+ <script type="text/javascript">
+  var verifyCallback = function(response) {
+    alert(response);
+  };
+  var widgetId1;
+  var onloadCallback = function() {
+    widgetId1 = grecaptcha.render('recaptcha1', {
+      'theme' : 'light'
+    })
+  	 grecaptcha.reset();
+  };
 </script>
       
   </body>
