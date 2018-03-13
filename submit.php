@@ -1,4 +1,16 @@
 <?php 
+if(isset($_POST)){    
+  $captcha = $_POST['g-recaptcha-response'];
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $secretkey = "6Lf7p0UUAAAAAJPs7qgg8Muv33aUcDDEsFUFKRl_";          
+  $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretkey."&response=".$captcha."&remoteip=".$ip);
+  $responseKeys = json_decode($response,true);          
+
+ if($responseKeys['success'] == false){
+   echo "You are not a Human. Please Verify Recaptcha";
+   exit();
+ }
+
   $to = 'support@portisarg.me' ;  // Replace email address with your own
   $subject = 'Contact Form' ; 
   $name = $_POST['name'] ; 
@@ -28,4 +40,5 @@
   // The last is the message, as declared by the $message variable which holds the user submitted data
   // If the message is sent successfully, a "success message" is echoed.
   // If not, an alternate message is echoed.
+}
 ?>
