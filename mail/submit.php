@@ -9,17 +9,18 @@ if(isset($_POST)){
    echo "You are not a Human. Please Verify Recaptcha";
    exit();
  }
-  $to = 'support@portisarg.me' ;  // Replace email address with your own
-  $subject = 'Contact Form' ; 
+
   $name = $_POST['name'] ; 
   $email = $_POST['email'] ;
   $phone = $_POST['phone'] ;
   $message = $_POST['message'] ;
-  // The above are the variables that will hold data entered by the user
-  // You can use these variables, rename them or create your own
+// Create the email and send the message
+  
+  $to = 'support@portisarg.me' ;  // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+  $subject = "Website Contact Form:  $name";
   $message = "From: $name \nEmail: $email \nPhone: $phone \nMessage: $message \n";
   // The $message variable will form the message of the email.
-  // It collects the variables your declared at the top
+  
   // A line break ( \n ) is placed between each section
   $sent = mail($to, $subject, $message) ; 
     if($sent) {
