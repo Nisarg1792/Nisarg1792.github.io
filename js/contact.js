@@ -19,7 +19,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "mail/submit.php",
+                 url: "././mail/submit.php",
                 type: "POST",
                 data: {
                     name: name,
