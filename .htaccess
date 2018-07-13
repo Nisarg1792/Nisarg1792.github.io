@@ -4,6 +4,8 @@
  RewriteEngine on
  RewriteCond %{HTTP_HOST} ^www\.portisarg\.me$
  RewriteRule ^/?$ "http\:\/\/portisarg\.me\/" [R=301,L]
+ 
+Redirect 302 / https://www.instagram.com/destination__places/
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
