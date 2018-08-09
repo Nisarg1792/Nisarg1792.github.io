@@ -11,7 +11,6 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
-            var gcaptcha = $("recaptcha1").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -25,8 +24,7 @@ $(function() {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message,
-                    gcaptcha: gcaptcha
+                    message: message
                 },
                 cache: false,
                 success: function() {
