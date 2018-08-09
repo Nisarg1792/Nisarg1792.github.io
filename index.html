@@ -662,7 +662,6 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                 <div class="g-recaptcha" id="recaptcha1" data-sitekey="6Lf7p0UUAAAAAET23Wi0TyexgLiPQFMitONdhjl2"></div>
                   <button type="submit" class="btn btn-send">Send Message</button> <!-- Send button -->
                 </div>
               </div>
@@ -732,20 +731,5 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
- 
- <script type="text/javascript">
-  var verifyCallback = function(response) {
-    alert(response);
-  };
-  var widgetId1;
-  var onloadCallback = function() {
-    widgetId1 = grecaptcha.render('recaptcha1', {
-      'theme' : 'light'
-    })
-  	 grecaptcha.reset();
-  };
-</script>
-      
   </body>
 </html>
