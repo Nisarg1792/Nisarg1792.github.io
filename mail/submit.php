@@ -1,15 +1,4 @@
 <?php 
-if(isset($_POST)){    
-  $captcha = $_POST['g-recaptcha-response'];
-  $ip = $_SERVER['REMOTE_ADDR'];
-  $secretkey = "6Lf7p0UUAAAAAJPs7qgg8Muv33aUcDDEsFUFKRl_";          
-  $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretkey."&response=".$captcha."&remoteip=".$ip);
-  $responseKeys = json_decode($response,true);          
- if($responseKeys['success'] == false){
-   echo "You are not a Human. Please Verify Recaptcha";
-   exit();
- }
-
   $name = $_POST['name'] ; 
   $email = $_POST['email'] ;
   $phone = $_POST['phone'] ;
